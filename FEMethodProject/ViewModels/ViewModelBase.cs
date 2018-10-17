@@ -7,5 +7,10 @@ namespace FEMethodProject.ViewModels
 {
 	public class ViewModelBase : ReactiveObject
 	{
+		public string Title 
+		{
+			get;
+			set;
+		}
 	}
 }
