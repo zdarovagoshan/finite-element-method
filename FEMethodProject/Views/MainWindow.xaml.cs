@@ -13,7 +13,7 @@ namespace FEMethodProject.Views
 			InitializeComponent();
 			_load.Click += delegate
             {
-                //Действие при нажатии кнопки load
+                //Действие при нажатии кнопки _load
             };
             _solve.Click += delegate
             {
