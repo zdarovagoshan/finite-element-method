@@ -25,12 +25,12 @@ namespace ConsoleApplication1
 {
     class Program
     {
-        static void Main(string[] args)
+        /*static void Main(string[] args)
         {
             mke m = new mke();
             m.solution();
             Console.ReadKey();
-        }
+        }*/
     }
     class mke
     {
@@ -48,7 +48,7 @@ namespace ConsoleApplication1
         protected LinearTrianglBasis basis;
         protected void input()
         {
-            StreamReader reader = new StreamReader(@"in.txt");
+            StreamReader reader = new StreamReader(@"Models/in.txt");
             string[] str = reader.ReadToEnd().Split(' ', '\n');
             int i=0, j;
             foreach (string a in str)
@@ -61,11 +61,11 @@ namespace ConsoleApplication1
                     this.k_1 = Convert.ToInt32(a);
             }
             reader.Close();
-            reader = new StreamReader(@"lam.txt");
+            /*reader = new StreamReader(@"Models/lam.txt");
             str = reader.ReadToEnd().Split(' ', '\n');
             this.lambda = Convert.ToDouble(str[0]);
-            reader.Close();
-            reader = new StreamReader(@"nvtr.txt");
+            reader.Close();*/
+            reader = new StreamReader(@"Models/nvtr.txt");
             str = reader.ReadToEnd().Split(' ','\n');
             i = 0; j=0;
             nvtr.Capacity =m;           
@@ -85,7 +85,7 @@ namespace ConsoleApplication1
             reader.Close();
             xy.Capacity = n;
             xy.Add(new koord());
-            reader = new StreamReader(@"xy.txt");
+            reader = new StreamReader(@"Models/xy.txt");
             str = reader.ReadToEnd().Split(' ', '\n');
             i = 0;
             j = 0;           
@@ -106,7 +106,7 @@ namespace ConsoleApplication1
                 }
             }
             reader.Close();
-            reader = new StreamReader(@"nvk.txt");
+            reader = new StreamReader(@"Models/nvk.txt");
             str = reader.ReadToEnd().Split(' ', '\n');
             kraev1.Capacity = k_1;
             foreach (string a in str)
