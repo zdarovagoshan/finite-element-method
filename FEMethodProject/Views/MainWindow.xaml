@@ -2,12 +2,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="clr-namespace:FEMethodProject.ViewModels;assembly=FEMethodProject"
         Icon="resm:FEMethodProject.Assets.avalonia-logo.ico"
-        Title="FEMethodProject">
+        Title="Метод конечных элементов"
+        Background="White" MinWidth="640" MinHeight="480" Width="640" Height="480">
 
-  <Design.DataContext>
-    <vm:MainWindowViewModel/>
-  </Design.DataContext>
-  
-  <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-  
+  <Grid MinWidth="640" MinHeight="480">
+    <StackPanel Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top">
+      <Button Name="load" Content="Load"> </Button>
+      <Button x:Name="solve" Content="Solve"> </Button>
+    </StackPanel>
+    <StackPanel Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+      <TextBlock Name="result">
+        
+      </TextBlock>
+    </StackPanel>
+  </Grid>  
 </Window>
