@@ -5,15 +5,25 @@
         Title="Метод конечных элементов"
         Background="White" MinWidth="640" MinHeight="480" Width="640" Height="480">
 
-  <Grid MinWidth="640" MinHeight="480">
-    <StackPanel Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top">
-      <Button Name="load" Content="Load"> </Button>
-      <Button x:Name="solve" Content="Solve"> </Button>
-    </StackPanel>
-    <StackPanel Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
-      <TextBlock Name="result">
-        
-      </TextBlock>
-    </StackPanel>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition/>
+      <RowDefinition Height="Auto"/> 
+    </Grid.RowDefinitions>
+    <Menu Grid.Row="0">
+      <MenuItem Header="Решение">
+        <MenuItem Header="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Command.Name}" Command="{Binding LoadGridCommand}"/>
+        <MenuItem Header="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Command.Name}" Command="{Binding CalculateCommand}"/>
+      </MenuItem>
+    </Menu>
+
+
+    <Border Grid.Row="2" Padding="5" BorderBrush="#000000" BorderThickness="1">
+      <StackPanel Orientation="Horizontal">
+        <TextBlock Text="{Binding PathToGridFile}"/>
+      </StackPanel>  
+    </Border>
+    
   </Grid>  
 </Window>
