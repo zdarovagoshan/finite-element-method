@@ -6,19 +6,10 @@ namespace FEMethodProject.Views
 {
 	public class MainWindow : Window
 	{
-		private Button _load;
-        private Button _solve;
 		public MainWindow()
 		{
 			InitializeComponent();
-			_load.Click += delegate
-            {
-                //Действие при нажатии кнопки load
-            };
-            _solve.Click += delegate
-            {
-                //Действие при нажатии кнопки solve
-            };
+			DataContext = new ViewModels.MainWindowViewModel();
 #if DEBUG
             this.AttachDevTools();
 #endif
@@ -27,8 +18,6 @@ namespace FEMethodProject.Views
 		private void InitializeComponent()
 		{
 			AvaloniaXamlLoader.Load(this);
-			_load = this.FindControl<Button>("load");
-            _solve = this.FindControl<Button>("solve");
 		}
 	}
 }
