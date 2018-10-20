@@ -9,7 +9,7 @@ namespace FEMethodProject.Views
 		public MainWindow()
 		{
 			InitializeComponent();
-			DataContext = new ViewModels.MainWindowViewModel() { Window = this };
+			DataContext = new ViewModels.MainWindowViewModel();
 #if DEBUG
             this.AttachDevTools();
 #endif

@@ -6,7 +6,6 @@ namespace FEMethodProject.ViewModels
 {
 	public class DelegateCommand : ICommand
 	{
-
 		#region ctor
 
 		public DelegateCommand(Action<object> execute) : this(execute, null)
@@ -29,6 +28,7 @@ namespace FEMethodProject.ViewModels
 		#region ICommand implementation
 
 		public event EventHandler CanExecuteChanged;
+		
 
 		public bool CanExecute(object commandParameter)
 		{
