@@ -48,7 +48,7 @@ namespace ConsoleApplication1
         protected LinearTrianglBasis basis;
         protected void input()
         {
-            StreamReader reader = new StreamReader(@"Models/in.txt");
+            StreamReader reader = new StreamReader(@"FEMethodProject/Models/in.txt");
             string[] str = reader.ReadToEnd().Split(' ', '\n');
             int i=0, j;
             foreach (string a in str)
@@ -65,7 +65,7 @@ namespace ConsoleApplication1
             str = reader.ReadToEnd().Split(' ', '\n');
             this.lambda = Convert.ToDouble(str[0]);
             reader.Close();*/
-            reader = new StreamReader(@"Models/nvtr.txt");
+            reader = new StreamReader(@"FEMethodProject/Models/nvtr.txt");
             str = reader.ReadToEnd().Split(' ','\n');
             i = 0; j=0;
             nvtr.Capacity =m;           
@@ -85,7 +85,7 @@ namespace ConsoleApplication1
             reader.Close();
             xy.Capacity = n;
             xy.Add(new koord());
-            reader = new StreamReader(@"Models/xy.txt");
+            reader = new StreamReader(@"FEMethodProject/Models/xy.txt");
             str = reader.ReadToEnd().Split(' ', '\n');
             i = 0;
             j = 0;           
@@ -106,7 +106,7 @@ namespace ConsoleApplication1
                 }
             }
             reader.Close();
-            reader = new StreamReader(@"Models/nvk.txt");
+            reader = new StreamReader(@"FEMethodProject/Models/nvk.txt");
             str = reader.ReadToEnd().Split(' ', '\n');
             kraev1.Capacity = k_1;
             foreach (string a in str)

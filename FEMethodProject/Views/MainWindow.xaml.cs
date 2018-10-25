@@ -10,6 +10,9 @@ namespace FEMethodProject.Views
 		{
 			InitializeComponent();
 			DataContext = new ViewModels.MainWindowViewModel();
+			/* var kek = this.PlatformImpl?.Handle;
+			this.PlatformImpl?.Screen;
+			this.Window; */
 #if DEBUG
             this.AttachDevTools();
 #endif
@@ -18,6 +21,13 @@ namespace FEMethodProject.Views
 		private void InitializeComponent()
 		{
 			AvaloniaXamlLoader.Load(this);
+			//this.PlatformImpl?.Handle;
 		}
 	}
 }
+/* public class DllImportFunctions
+{
+    [DllImport("glx")]
+    public static extern int main();
+
+} */

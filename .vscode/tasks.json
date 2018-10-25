@@ -12,6 +12,19 @@
                 "reveal": "silent"
             },
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "cbuild",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g","FEMethodProject/glx2.cpp", "-lglut", "-lglfw", "-lGLEW", "-lGLU", "-lGL", "-fPIC", "-lX11", "-lpthread", "-lXrandr", "-lXi", "-ldl"
+                //"-shared", "opengl_window.cpp", "-o", "libopengl_window.so", "-lglfw", "-lGLEW", "-lGLU", "-lGL"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault":true
+            }
         }
     ]
 }

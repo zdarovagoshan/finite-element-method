@@ -7,6 +7,7 @@ namespace FEMethodProject.ViewModels
 {
 	public class MainWindowViewModel : ViewModelBase
 	{
+		private ConsoleApplication1.mke m;
 		public MainWindowViewModel()
 		{
 			_title = "Finite Element Method";
@@ -21,14 +22,15 @@ namespace FEMethodProject.ViewModels
 		public async void LoadGrid(object parameter)
 		{
 			_isGridReading = true;
-
+/* 
 			OpenFileDialog d = new OpenFileDialog();
 			d.Title = "Загрузка файла сетки";
 
 			string[] selectedFiles = await d.ShowAsync();
-			if (selectedFiles != null) PathToGridFile = selectedFiles[0];
+			if (selectedFiles != null) PathToGridFile = selectedFiles[0]; */
 
 			// Code for mesh reading here
+			 m = new ConsoleApplication1.mke();
 
 			_isGridReading = false;
 		}
@@ -38,6 +40,7 @@ namespace FEMethodProject.ViewModels
 			_isCalculating = true;
 
 			// Code for call models and get FEM solution here
+			 m.solution();
 
 			_isCalculating = false;
 		}
